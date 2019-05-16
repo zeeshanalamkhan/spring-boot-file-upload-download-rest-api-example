@@ -1,0 +1,43 @@
+server:
+  port: 8083
+  
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+  
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: system
+    password: manager
+    
+## Hibernate Properties
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      format-sql: true
+    show-sql: true
+
+
+## MULTIPART (MultipartProperties)
+# Enable multipart uploads
+
+  servlet:
+    multipart:
+      enabled: true
+      
+# Threshold after which files are written to disk.
+
+      file-size-threshold: 2KB
+      
+# Max file size. 
+   
+      max-file-size: 200MB
+      
+# Max Request Size.
+      
+      max-request-size: 215MB
+
+
+
+    
